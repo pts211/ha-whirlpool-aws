@@ -8,7 +8,7 @@
   "iot_class": "cloud_push",
   "loggers": ["whirlpool"],
   "requirements": [
-    "whirlpool-sixth-sense @ git+https://github.com/pts211/whirlpool-sixth-sense.git@1e63f07e729e1f4e327c66bc05acba49bfd0c88a"
+    "whirlpool-sixth-sense @ git+https://github.com/pts211/whirlpool-sixth-sense.git@fb2ff61"
   ],
   "version": "0.1.0"
 }
