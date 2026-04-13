@@ -1,0 +1,82 @@
+{
+  "entity": {
+    "binary_sensor": {
+      "microwave_door_locked": {
+        "default": "mdi:lock"
+      },
+      "microwave_remote_start": {
+        "default": "mdi:remote"
+      },
+      "microwave_turntable": {
+        "default": "mdi:rotate-right"
+      }
+    },
+    "button": {
+      "microwave_cancel_cook": {
+        "default": "mdi:stop-circle"
+      }
+    },
+    "light": {
+      "microwave_hood_light": {
+        "default": "mdi:lightbulb"
+      }
+    },
+    "select": {
+      "microwave_hood_fan": {
+        "default": "mdi:fan"
+      }
+    },
+    "sensor": {
+      "dryer_state": {
+        "default": "mdi:tumble-dryer"
+      },
+      "microwave_active_recipe": {
+        "default": "mdi:microwave"
+      },
+      "microwave_cavity_state": {
+        "default": "mdi:microwave"
+      },
+      "microwave_display_temperature": {
+        "default": "mdi:thermometer"
+      },
+      "microwave_door_status": {
+        "default": "mdi:door"
+      },
+      "microwave_power_level": {
+        "default": "mdi:flash"
+      },
+      "microwave_timer_remaining": {
+        "default": "mdi:timer-outline"
+      },
+      "microwave_timer_state": {
+        "default": "mdi:timer"
+      },
+      "oven_state": {
+        "default": "mdi:stove"
+      },
+      "oven_state_lower": {
+        "default": "mdi:stove"
+      },
+      "oven_state_upper": {
+        "default": "mdi:stove"
+      },
+      "washer_state": {
+        "default": "mdi:washing-machine"
+      }
+    },
+    "switch": {
+      "microwave_cavity_light": {
+        "default": "mdi:lightbulb"
+      },
+      "microwave_control_lock": {
+        "default": "mdi:lock"
+      },
+      "microwave_quiet_mode": {
+        "default": "mdi:volume-off"
+      },
+      "microwave_sabbath_mode": {
+        "default": "mdi:star-david"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+start_microwave:
+  name: Start Microwave
+  description: Start a microwave cooking cycle. Remote start must be enabled on the physical panel.
+  fields:
+    entity_id:
+      name: Entity
+      description: A microwave entity from this integration
+      required: true
+      selector:
+        entity:
+          integration: whirlpool_aws
+    recipe:
+      name: Recipe
+      description: Cooking mode
+      required: true
+      selector:
+        select:
+          options:
+            - microwave
+            - reheat
+            - defrost
+            - soften
+    power_level:
+      name: Power Level
+      description: Power level (1-100)
+      required: true
+      selector:
+        number:
+          min: 1
+          max: 100
+          step: 1
+    duration:
+      name: Duration
+      description: Cook time in seconds
+      required: true
+      selector:
+        number:
+          min: 1
+          max: 5400
+          step: 1
