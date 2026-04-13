@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from whirlpool.appliance import Appliance
+from whirlpool_aws.appliance import Appliance
 
 from homeassistant.components.diagnostics import async_redact_data
 from homeassistant.core import HomeAssistant

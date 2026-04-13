@@ -6,8 +6,8 @@ from collections.abc import Awaitable, Callable
 from dataclasses import dataclass
 from typing import Final, override
 
-from whirlpool.appliance import Appliance
-from whirlpool.microwave import HoodFanSpeed, Microwave
+from whirlpool_aws.appliance import Appliance
+from whirlpool_aws.microwave import HoodFanSpeed, Microwave
 
 from homeassistant.components.select import SelectEntity, SelectEntityDescription
 from homeassistant.const import UnitOfTemperature

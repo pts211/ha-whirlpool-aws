@@ -6,16 +6,16 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta
 from typing import override
 
-from whirlpool.appliance import Appliance
-from whirlpool.dryer import Dryer, MachineState as DryerMachineState
-from whirlpool.microwave import Microwave, MicrowaveCavityState, MicrowaveDoorStatus
-from whirlpool.oven import (
+from whirlpool_aws.appliance import Appliance
+from whirlpool_aws.dryer import Dryer, MachineState as DryerMachineState
+from whirlpool_aws.microwave import Microwave, MicrowaveCavityState, MicrowaveDoorStatus
+from whirlpool_aws.oven import (
     Cavity as OvenCavity,
     CavityState as OvenCavityState,
     CookMode,
     Oven,
 )
-from whirlpool.washer import MachineState as WasherMachineState, Washer
+from whirlpool_aws.washer import MachineState as WasherMachineState, Washer
 
 from homeassistant.components.sensor import (
     RestoreSensor,

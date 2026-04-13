@@ -1,6 +1,6 @@
 """Constants for the Whirlpool AWS integration."""
 
-from whirlpool.backendselector import Brand, Region
+from whirlpool_aws.backendselector import Brand, Region
 
 DOMAIN = "whirlpool_aws"
 CONF_BRAND = "brand"

@@ -4,10 +4,10 @@ import logging
 
 import voluptuous as vol
 from aiohttp import ClientError
-from whirlpool.appliancesmanager import AppliancesManager
-from whirlpool.auth import AccountLockedError as WhirlpoolAccountLocked, Auth
-from whirlpool.backendselector import BackendSelector
-from whirlpool.microwave import RecipeId
+from whirlpool_aws.appliancesmanager import AppliancesManager
+from whirlpool_aws.auth import AccountLockedError as WhirlpoolAccountLocked, Auth
+from whirlpool_aws.backendselector import BackendSelector
+from whirlpool_aws.microwave import RecipeId
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_PASSWORD, CONF_REGION, CONF_USERNAME, Platform

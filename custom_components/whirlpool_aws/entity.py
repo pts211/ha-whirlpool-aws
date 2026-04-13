@@ -2,8 +2,8 @@
 
 import logging
 
-from whirlpool.appliance import Appliance
-from whirlpool.oven import Cavity as OvenCavity, Oven
+from whirlpool_aws.appliance import Appliance
+from whirlpool_aws.oven import Cavity as OvenCavity, Oven
 
 from homeassistant.core import callback
 from homeassistant.exceptions import HomeAssistantError

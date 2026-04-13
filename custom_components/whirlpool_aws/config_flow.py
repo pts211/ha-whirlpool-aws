@@ -8,9 +8,9 @@ from typing import Any
 
 from aiohttp import ClientError
 import voluptuous as vol
-from whirlpool.appliancesmanager import AppliancesManager
-from whirlpool.auth import AccountLockedError as WhirlpoolAccountLocked, Auth
-from whirlpool.backendselector import BackendSelector
+from whirlpool_aws.appliancesmanager import AppliancesManager
+from whirlpool_aws.auth import AccountLockedError as WhirlpoolAccountLocked, Auth
+from whirlpool_aws.backendselector import BackendSelector
 
 from homeassistant.config_entries import ConfigFlow, ConfigFlowResult
 from homeassistant.const import CONF_PASSWORD, CONF_REGION, CONF_USERNAME

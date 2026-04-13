@@ -4,8 +4,8 @@ from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import timedelta
 
-from whirlpool.appliance import Appliance
-from whirlpool.microwave import Microwave
+from whirlpool_aws.appliance import Appliance
+from whirlpool_aws.microwave import Microwave
 
 from homeassistant.components.binary_sensor import (
     BinarySensorDeviceClass,

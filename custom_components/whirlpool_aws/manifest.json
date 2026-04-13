@@ -6,7 +6,9 @@
   "documentation": "https://github.com/pts211/ha-whirlpool-aws",
   "integration_type": "hub",
   "iot_class": "cloud_push",
-  "loggers": ["whirlpool"],
-  "requirements": [],
+  "loggers": ["whirlpool_aws"],
+  "requirements": [
+    "whirlpool-sixth-sense-aws @ git+https://github.com/pts211/whirlpool-sixth-sense.git@aws_iot-scaffolding"
+  ],
   "version": "0.1.0"
 }

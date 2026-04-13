@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any, override
 
-from whirlpool.microwave import HoodLightColor, HoodLightLevel, Microwave
+from whirlpool_aws.microwave import HoodLightColor, HoodLightLevel, Microwave
 
 from homeassistant.components.light import (
     ATTR_BRIGHTNESS,

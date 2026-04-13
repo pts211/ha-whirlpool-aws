@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from whirlpool.aircon import Aircon, FanSpeed as AirconFanSpeed, Mode as AirconMode
+from whirlpool_aws.aircon import Aircon, FanSpeed as AirconFanSpeed, Mode as AirconMode
 
 from homeassistant.components.climate import (
     FAN_AUTO,

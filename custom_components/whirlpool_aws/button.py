@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from typing import override
 
-from whirlpool.microwave import Microwave
+from whirlpool_aws.microwave import Microwave
 
 from homeassistant.components.button import ButtonEntity
 from homeassistant.core import HomeAssistant
