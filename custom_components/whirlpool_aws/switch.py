@@ -25,6 +25,7 @@ class WhirlpoolSwitchDescription(SwitchEntityDescription):
     is_on_fn: Callable[[Microwave], bool | None]
     turn_on_fn: Callable[[Microwave], Awaitable[bool]]
     turn_off_fn: Callable[[Microwave], Awaitable[bool]]
+    supported_fn: Callable[[Microwave], bool] = lambda _mwo: True
 
 
 MICROWAVE_SWITCHES: tuple[WhirlpoolSwitchDescription, ...] = (
@@ -41,6 +42,7 @@ MICROWAVE_SWITCHES: tuple[WhirlpoolSwitchDescription, ...] = (
         is_on_fn=lambda mwo: mwo.get_control_locked(),
         turn_on_fn=lambda mwo: mwo.set_control_locked(True),
         turn_off_fn=lambda mwo: mwo.set_control_locked(False),
+        supported_fn=lambda mwo: mwo.supports_control_lock,
     ),
     WhirlpoolSwitchDescription(
         key="mwo_quiet_mode",
@@ -48,6 +50,7 @@ MICROWAVE_SWITCHES: tuple[WhirlpoolSwitchDescription, ...] = (
         is_on_fn=lambda mwo: mwo.get_quiet_mode(),
         turn_on_fn=lambda mwo: mwo.set_quiet_mode(True),
         turn_off_fn=lambda mwo: mwo.set_quiet_mode(False),
+        supported_fn=lambda mwo: mwo.supports_quiet_mode,
     ),
     WhirlpoolSwitchDescription(
         key="mwo_sabbath_mode",
@@ -55,6 +58,7 @@ MICROWAVE_SWITCHES: tuple[WhirlpoolSwitchDescription, ...] = (
         is_on_fn=lambda mwo: mwo.get_sabbath_mode(),
         turn_on_fn=lambda mwo: mwo.set_sabbath_mode(True),
         turn_off_fn=lambda mwo: mwo.set_sabbath_mode(False),
+        supported_fn=lambda mwo: mwo.supports_sabbath_mode,
     ),
 )
 
@@ -71,6 +75,7 @@ async def async_setup_entry(
         WhirlpoolSwitch(mwo, description)
         for mwo in appliances_manager.microwaves
         for description in MICROWAVE_SWITCHES
+        if description.supported_fn(mwo)
     )
 
 
