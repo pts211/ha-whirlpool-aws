@@ -1,5 +1,16 @@
 """The Whirlpool Appliances (AWS IoT) integration."""
 
+# Bootstrap the vendored library BEFORE any whirlpool_aws imports. The
+# library is bundled under _vendor/ instead of installed via pip so HA's
+# built-in `whirlpool` integration (which pins its own copy) can't clobber
+# it. See scripts/sync_library.sh for how _vendor/ gets populated.
+import sys
+from pathlib import Path
+
+_VENDOR_DIR = Path(__file__).parent / "_vendor"
+if _VENDOR_DIR.exists() and str(_VENDOR_DIR) not in sys.path:
+    sys.path.insert(0, str(_VENDOR_DIR))
+
 import logging
 
 import voluptuous as vol

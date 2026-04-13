@@ -1,0 +1,7 @@
+# Vendored library source — written by scripts/sync_library.sh.
+# Do not edit by hand; rerun the sync script instead.
+repo=pts211/whirlpool-sixth-sense
+ref=aws_iot-scaffolding
+sha=19f84591dd8a03de3b549432e3ac6a12131616c7
+source_dir=whirlpool_aws
+synced_at=2026-04-13T18:23:33Z
