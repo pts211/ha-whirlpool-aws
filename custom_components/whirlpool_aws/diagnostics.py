@@ -29,11 +29,17 @@ async def async_get_config_entry_diagnostics(
     """Return diagnostics for a config entry."""
 
     def get_appliance_diagnostics(appliance: Appliance) -> dict[str, Any]:
-        return {
+        data: dict[str, Any] = {
             "data_model": getattr(appliance.appliance_info, "data_model", "N/A"),
             "category": appliance.appliance_info.category,
             "model_number": appliance.appliance_info.model_number,
+            "online": appliance.get_online(),
+            "raw_state": appliance.get_raw_data(),
         }
+        profile = getattr(appliance, "capability_profile", None)
+        if profile is not None:
+            data["capability_profile_raw"] = getattr(profile, "raw", None)
+        return data
 
     appliances_manager = config_entry.runtime_data
     diagnostics_data = {
