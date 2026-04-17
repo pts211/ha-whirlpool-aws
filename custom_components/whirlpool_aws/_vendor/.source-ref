@@ -2,6 +2,6 @@
 # Do not edit by hand; rerun the sync script instead.
 repo=pts211/whirlpool-sixth-sense
 ref=aws_iot-scaffolding
-sha=3fb4c5f0f023faf60a107928c4ec6eaa7d4e4812
+sha=1ffc32890a3a51f91c909a94bba6b2af60ab9664
 source_dir=whirlpool
-synced_at=2026-04-16T14:51:17Z
+synced_at=2026-04-17T20:59:07Z
