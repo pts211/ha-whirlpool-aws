@@ -7,5 +7,5 @@
   "integration_type": "hub",
   "iot_class": "cloud_push",
   "loggers": ["whirlpool_aws"],
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
